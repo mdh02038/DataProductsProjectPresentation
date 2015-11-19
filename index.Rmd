@@ -23,6 +23,8 @@ knit        : slidify::knit2slides
 
 This is slide 2
 
+--- .class #id
+
 ## Slide 3
 
 This is slide 3
