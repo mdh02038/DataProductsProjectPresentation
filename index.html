@@ -34,7 +34,7 @@
   <hgroup class="auto-fadein">
     <h1>Orienteering Pace Calculator</h1>
     <h2></h2>
-    <p>Mark<br/></p>
+    <p>Mark<br/>Coursera Data Products Project</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -42,15 +42,36 @@
 
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
-  <hgroup>
-    <h2>Read-And-Delete</h2>
-  </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <!-- Limit image width and height -->
+
+<style type='text/css'>
+img {
+    max-height: 560px;
+    max-width: 964px;
+}
+</style>
+
+<!-- Center image on slide -->
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+
+<h2>Overview</h2>
+
+<p>The Orienteering Pace Calculator is a simple tool to be used by orienteerers.  </p>
+
+<p><br>This application converts the number of steps per 1/4 inch from one map scale to another.<br>
+The need for this commonly occurs when going to a variety of orienteering meets as the maps scales 
+vary depending on the event.  </p>
+
+<p><br>Most orienteerers carry a cellphone for route mapping. This application will allow them to use their cell
+phone, via a web browser, to easily translate their step counts. </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -58,10 +79,10 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Application Screenshot</h2>
   </hgroup>
   <article data-timings="">
-    <p>This is slide 2</p>
+    <p><img src="snapshot.png" alt="width"></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -69,10 +90,41 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 3</h2>
+    <h2>Instructions</h2>
   </hgroup>
   <article data-timings="">
-    <p>This is slide 3</p>
+    <p>To use the application:  <br>
+1. go to <a href="https://raquette.shinyapps.io/Project">https://raquette.shinyapps.io/Project</a><br>
+2. Enter your walking and running pace in steps per 1/4&quot; in the left hand panel,<br>
+3. Enter the map scale for the pace above<br>
+4. Enter the map scale at which to calculate the new running and walking paces<br>
+5. Hit the submit button.<br>
+6. The results will appear in the right hand panel.  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Calibration</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>If you don&#39;t know your reference pace, here&#39;s how to calculate it:  <br>
+1. Measure out a fixed distance on the ground in feet.<br>
+2. Walk the distance and count your steps.<br>
+3. Divide the number of steps by the distance in feet and then multiple the total by 208.<br>
+4. This number will be your walking pace for a map at a 1:10000 scale.<br>
+5. Repeat while running to calculate your running pace.  </p>
+
+<p><br>Example: If you walked 100 feet in 38 steps</p>
+
+<pre><code class="r">steps &lt;- 38
+distance &lt;- 100
+pace &lt;- 208*steps/distance
+</code></pre>
+
+<p>your walking pace would be 79.04 steps per 1/4 @ a map scale of 1:10000.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -84,20 +136,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='NA'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Application Screenshot'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 3'>
+        data-slide=3 title='Instructions'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Calibration'>
+         4
       </a>
     </li>
   </ul>
